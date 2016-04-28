@@ -39,7 +39,94 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="273" y="357"/>
+            <point key="canvasLocation" x="159" y="39"/>
+        </scene>
+        <!--Time Picker View Controller-->
+        <scene sceneID="P0x-dO-GNm">
+            <objects>
+                <viewController id="vYg-6y-qpr" customClass="TimePickerViewController" customModule="Affirmations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="grI-Hc-m70"/>
+                        <viewControllerLayoutGuide type="bottom" id="oyv-Cj-KnN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jWZ-Q7-9XF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="e2r-27-Cgo">
+                                <rect key="frame" x="0.0" y="60" width="321" height="248"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Earliest Affirmation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuJ-rU-qIt">
+                                        <rect key="frame" x="88" y="0.0" width="145" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="wry-xp-Oy3">
+                                        <rect key="frame" x="0.0" y="32" width="321" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="483493166.32415098">
+                                            <!--2016-04-27 23:39:26 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="scheduleAffirmations:" destination="vYg-6y-qpr" eventType="valueChanged" id="JaS-U1-bV0"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MNr-Tm-gRJ">
+                                <rect key="frame" x="0.0" y="325" width="320" height="237"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Latest Affirmation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ma-ph-8UD">
+                                        <rect key="frame" x="92" y="0.0" width="137" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gDy-Ft-B6L">
+                                        <rect key="frame" x="0.0" y="21" width="320" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="483493182.47658199">
+                                            <!--2016-04-27 23:39:42 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="scheduleAffirmations:" destination="vYg-6y-qpr" eventType="valueChanged" id="nx7-Qz-scr"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="a5w-ay-u49">
+                                <rect key="frame" x="200" y="0.0" width="221" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Number of Daily Alerts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4U-wm-JE5">
+                                        <rect key="frame" x="0.0" y="0.0" width="173" height="30"/>
+                                        <color key="backgroundColor" red="0.31294376711993244" green="1" blue="0.055618460728186214" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aKF-v8-DTi">
+                                        <rect key="frame" x="193" y="0.0" width="28" height="30"/>
+                                        <color key="backgroundColor" red="0.19871391790000001" green="1" blue="0.81377771899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MNr-Tm-gRJ" firstAttribute="centerX" secondItem="jWZ-Q7-9XF" secondAttribute="centerX" id="8Zv-C4-LBP"/>
+                            <constraint firstItem="a5w-ay-u49" firstAttribute="centerX" secondItem="jWZ-Q7-9XF" secondAttribute="centerX" id="BIf-zC-hj6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="earliestAffirmation" destination="wry-xp-Oy3" id="OLj-j3-gpk"/>
+                        <outlet property="latestAffirmation" destination="gDy-Ft-B6L" id="mdD-8O-fh3"/>
+                        <outlet property="numberOfAffirmations" destination="aKF-v8-DTi" id="qKT-V3-BbP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m6y-OV-mL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="159" y="844"/>
         </scene>
     </scenes>
 </document>

@@ -14,8 +14,9 @@
 		853630AD1CCADBAF00839E23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853630AB1CCADBAF00839E23 /* LaunchScreen.storyboard */; };
 		853630B81CCADBB000839E23 /* AffirmationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853630B71CCADBB000839E23 /* AffirmationsTests.swift */; };
 		853630C31CCADBB000839E23 /* AffirmationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853630C21CCADBB000839E23 /* AffirmationsUITests.swift */; };
+		855F64AB1CDAD0AA00A25F39 /* swquestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 855F64AA1CDAD0AA00A25F39 /* swquestions.json */; };
+		855F64AD1CDAD29900A25F39 /* Affirmations.json in Resources */ = {isa = PBXBuildFile; fileRef = 855F64AC1CDAD29900A25F39 /* Affirmations.json */; };
 		85B79D561CD183C300127FF4 /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B79D551CD183C300127FF4 /* TimePickerViewController.swift */; };
-		85C1163A1CD041BA004FAF64 /* Affirmations.json in Resources */ = {isa = PBXBuildFile; fileRef = 85C116391CD041BA004FAF64 /* Affirmations.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +50,9 @@
 		853630BE1CCADBB000839E23 /* AffirmationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AffirmationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		853630C21CCADBB000839E23 /* AffirmationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmationsUITests.swift; sourceTree = "<group>"; };
 		853630C41CCADBB000839E23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		855F64AA1CDAD0AA00A25F39 /* swquestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = swquestions.json; sourceTree = "<group>"; };
+		855F64AC1CDAD29900A25F39 /* Affirmations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Affirmations.json; sourceTree = "<group>"; };
 		85B79D551CD183C300127FF4 /* TimePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
-		85C116391CD041BA004FAF64 /* Affirmations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Affirmations.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +108,8 @@
 				853630A61CCADBAF00839E23 /* Main.storyboard */,
 				853630A91CCADBAF00839E23 /* Assets.xcassets */,
 				853630AB1CCADBAF00839E23 /* LaunchScreen.storyboard */,
-				85C116391CD041BA004FAF64 /* Affirmations.json */,
+				855F64AA1CDAD0AA00A25F39 /* swquestions.json */,
+				855F64AC1CDAD29900A25F39 /* Affirmations.json */,
 				853630AE1CCADBAF00839E23 /* Info.plist */,
 				85B79D551CD183C300127FF4 /* TimePickerViewController.swift */,
 			);
@@ -235,8 +238,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85C1163A1CD041BA004FAF64 /* Affirmations.json in Resources */,
+				855F64AB1CDAD0AA00A25F39 /* swquestions.json in Resources */,
 				853630AD1CCADBAF00839E23 /* LaunchScreen.storyboard in Resources */,
+				855F64AD1CDAD29900A25F39 /* Affirmations.json in Resources */,
 				853630AA1CCADBAF00839E23 /* Assets.xcassets in Resources */,
 				853630A81CCADBAF00839E23 /* Main.storyboard in Resources */,
 			);

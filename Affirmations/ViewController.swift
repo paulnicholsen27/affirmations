@@ -10,10 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var affirmations:AnyObject = [:]
+    
     @IBOutlet weak var positiveMessage: UILabel!
     
     @IBAction func sendAffirmation(sender: AnyObject) {
-        scheduleAffirmation()
+        positiveMessage.text = getAffirmation()
     }
     
     override func viewDidLoad() {
@@ -36,6 +38,21 @@ class ViewController: UIViewController {
         UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
         print("test 2")
     }
+    
+    func getAffirmation() -> String {
+        let url = NSBundle.mainBundle().URLForResource("Affirmations", withExtension: "json")
+        let data = NSData(contentsOfURL: url!)
+        do {
+            affirmations = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)
+        } catch {
+            print("error")
+        }
 
+        let random = String(arc4random_uniform(UInt32(affirmations.count)) + 1)
+        let new_affirmation = affirmations[random]!!["Affirmation"]!!
+        print(new_affirmation)
+        return new_affirmation as! String
+    }
+    
 }
 

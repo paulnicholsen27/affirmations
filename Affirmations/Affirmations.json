@@ -1,29 +1,42 @@
-[
-  {
-    "Be your own hero today."
+{
+  "1" : {
+    "Number" : 1,
+    "Affirmation" : "You can be strong."
   },
-  {
-    "You can do it!"
+  "2" : {
+    "Number" : 2,
+    "Affirmation" : "Be your own hero today."
   },
-  {
-    "There's only one person like you in the whole world."
+  "3" : {
+    "Number" : 3,
+    "Affirmation" : "You can do it!"
   },
-  {
-    "Today you have the power to make someone's life a little better."
+  "4" : {
+    "Number" : 4,
+    "Affirmation" : "There's only one person like you in the whole world."
   },
-  {
-    "You don't have to get there today.  Just get closer."
+  "5" : {
+    "Number" : 5,
+    "Affirmation" : "Today you have the power to make someone's life a little better."
   },
-  {
-    "It's OK to have bad days sometimes."
+  "6" : {
+    "Number" : 6,
+    "Affirmation" : "You don't have to get there today.  Just get closer."
   },
-  {
-    "You are special."
+  "7" : {
+    "Number" : 7,
+    "Affirmation" : "It's OK to have bad days sometimes."
   },
-  {
-    "I believe in you."
+  "8" : {
+    "Number" : 8,
+    "Affirmation" : "You are special."
   },
-  {
-    "Believe in yourself."
+  "9" : {
+    "Number" : 9,
+    "Affirmation" : "I believe in you."
+  },
+  "10" : {
+    "Number" : 10,
+    "Affirmation" : "Believe in yourself."
   }
-]
+}

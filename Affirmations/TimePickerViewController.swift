@@ -17,14 +17,23 @@ class TimePickerViewController: UIViewController {
     @IBOutlet weak var numberOfAffirmations: UITextField!
     
     @IBAction func scheduleAffirmations(sender: AnyObject) {
+        let totalAffirmations = Int(numberOfAffirmations.text!)!
+        let startTime = earliestAffirmation.date
+        let endTime = latestAffirmation.date
+        let numberOfHours = ceil((endTime.timeIntervalSince1970 - startTime.timeIntervalSince1970) / 3600)
+        print(numberOfHours)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TimePickerViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
 
+    func dismissKeyboard() {
+        self.numberOfAffirmations.resignFirstResponder()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

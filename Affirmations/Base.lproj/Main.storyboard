@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vYg-6y-qpr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vYg-6y-qpr">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -19,21 +19,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjI-54-c2l">
-                                <rect key="frame" x="189" y="366" width="223" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjI-54-c2l">
+                                <rect key="frame" x="219" y="420" width="162" height="30"/>
                                 <state key="normal" title="Tell Me Something Nice"/>
                                 <connections>
                                     <action selector="sendAffirmation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kmx-gV-2lZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDZ-fI-Xsc">
-                                <rect key="frame" x="279" y="206" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You rock!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDZ-fI-Xsc">
+                                <rect key="frame" x="40" y="206" width="520" height="133"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SjI-54-c2l" secondAttribute="bottom" constant="150" id="549-Dh-IcJ"/>
+                            <constraint firstItem="PDZ-fI-Xsc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="186" id="Zca-7d-kPu"/>
+                            <constraint firstItem="PDZ-fI-Xsc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="bvW-ZB-eG0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PDZ-fI-Xsc" secondAttribute="trailing" constant="20" id="pFA-eN-Ah8"/>
+                            <constraint firstItem="SjI-54-c2l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wGT-Go-umI"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="positiveMessage" destination="PDZ-fI-Xsc" id="lpY-AE-6ZF"/>
@@ -55,8 +62,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="n0T-wh-i0A">
-                                <rect key="frame" x="30" y="30" width="540" height="560"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="n0T-wh-i0A">
+                                <rect key="frame" x="30" y="32" width="540" height="560"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="a5w-ay-u49" userLabel="Number Affirmation Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="540" height="112"/>
@@ -65,7 +72,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="423" height="112"/>
                                                 <color key="backgroundColor" red="0.31294376711993244" green="1" blue="0.055618460728186214" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aKF-v8-DTi">
@@ -76,17 +83,19 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="e2r-27-Cgo" userLabel="Earliest Affirmation Stack View">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="e2r-27-Cgo" userLabel="Earliest Affirmation Stack View">
                                         <rect key="frame" x="0.0" y="112" width="540" height="224"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Earliest Affirmation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuJ-rU-qIt">
-                                                <rect key="frame" x="198" y="0.0" width="145" height="0.0"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earliest Affirmation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuJ-rU-qIt" userLabel="Earliest AffirmationLbl">
+                                                <rect key="frame" x="198" y="0.0" width="145" height="19"/>
+                                                <color key="backgroundColor" red="1" green="0.38051301830000001" blue="0.34743619019999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="wry-xp-Oy3">
-                                                <rect key="frame" x="0.0" y="10" width="540" height="214"/>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="wry-xp-Oy3" userLabel="Earliest AffirmationDP">
+                                                <rect key="frame" x="0.0" y="29" width="540" height="195"/>
+                                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 <date key="date" timeIntervalSinceReferenceDate="483493166.32415098">
                                                     <!--2016-04-27 23:39:26 +0000-->
                                                 </date>
@@ -96,22 +105,25 @@
                                             </datePicker>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="RuJ-rU-qIt" firstAttribute="top" secondItem="e2r-27-Cgo" secondAttribute="top" id="MeX-Kl-Yqx"/>
+                                            <constraint firstItem="RuJ-rU-qIt" firstAttribute="top" secondItem="e2r-27-Cgo" secondAttribute="top" id="MeX-Kl-Yqx" userLabel="Earliest AffirmationLbl.bottom = bottom"/>
                                             <constraint firstItem="wry-xp-Oy3" firstAttribute="leading" secondItem="e2r-27-Cgo" secondAttribute="leading" id="XZO-0u-H9v"/>
                                             <constraint firstAttribute="trailing" secondItem="wry-xp-Oy3" secondAttribute="trailing" id="saY-Pf-Rau"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MNr-Tm-gRJ" userLabel="Latest Affirmation Stack View">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MNr-Tm-gRJ" userLabel="Latest Affirmation Stack View">
                                         <rect key="frame" x="0.0" y="336" width="540" height="224"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Latest Affirmation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ma-ph-8UD">
-                                                <rect key="frame" x="202" y="0.0" width="137" height="0.0"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latest Affirmation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ma-ph-8UD" userLabel="Latest AffirmationLbl">
+                                                <rect key="frame" x="202" y="0.0" width="137" height="19"/>
+                                                <color key="backgroundColor" red="0.19871391790000001" green="1" blue="0.81377771899999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gDy-Ft-B6L">
-                                                <rect key="frame" x="0.0" y="10" width="540" height="214"/>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gDy-Ft-B6L" userLabel="Latest AffirmationDP">
+                                                <rect key="frame" x="0.0" y="29" width="540" height="195"/>
+                                                <color key="backgroundColor" red="0.29154493720000002" green="0.60784313729999995" blue="0.22720654840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" red="0.28235294119999998" green="0.38823529410000002" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <date key="date" timeIntervalSinceReferenceDate="483493182.47658199">
                                                     <!--2016-04-27 23:39:42 +0000-->
                                                 </date>
@@ -120,6 +132,7 @@
                                                 </connections>
                                             </datePicker>
                                         </subviews>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.89411764709999997" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="gDy-Ft-B6L" firstAttribute="leading" secondItem="MNr-Tm-gRJ" secondAttribute="leading" id="DuI-hN-XbH"/>
                                             <constraint firstAttribute="trailing" secondItem="gDy-Ft-B6L" secondAttribute="trailing" id="Qc6-Cu-epQ"/>
@@ -127,6 +140,7 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" red="1" green="0.38051301830000001" blue="0.34743619019999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="MNr-Tm-gRJ" firstAttribute="leading" secondItem="n0T-wh-i0A" secondAttribute="leading" identifier="Latest Affirmation Stack View.leading" id="66H-LR-VdJ"/>
                                     <constraint firstItem="a5w-ay-u49" firstAttribute="centerX" secondItem="n0T-wh-i0A" secondAttribute="centerX" identifier="Number Affirmation Stack View.centerX" id="75y-eM-EDx"/>

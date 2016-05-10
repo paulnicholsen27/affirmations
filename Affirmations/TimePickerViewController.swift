@@ -17,11 +17,17 @@ class TimePickerViewController: UIViewController {
     @IBOutlet weak var numberOfAffirmations: UITextField!
     
     @IBAction func scheduleAffirmations(sender: AnyObject) {
-        let totalAffirmations = Int(numberOfAffirmations.text!)!
+        let totalAffirmations = Double(numberOfAffirmations.text!)!
         let startTime = earliestAffirmation.date
         let endTime = latestAffirmation.date
-        let numberOfHours = ceil((endTime.timeIntervalSince1970 - startTime.timeIntervalSince1970) / 3600)
-        print(numberOfHours)
+        let totalTime = (endTime.timeIntervalSince1970 - startTime.timeIntervalSince1970) / 3600
+        let affirmationBlockLength = (totalTime / totalAffirmations) * 3600
+        var affirmationBlockStartTimes: [NSDate] = []
+        for i in 1...Int(totalAffirmations) {
+            affirmationBlockStartTimes.append(startTime.dateByAddingTimeInterval(affirmationBlockLength * Double(i)))
+        }
+        
+        print(affirmationBlockStartTimes)
     }
     
     override func viewDidLoad() {
